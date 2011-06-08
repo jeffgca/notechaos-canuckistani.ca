@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, code,
 del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,7 +18,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-style: inherit;
   font-size: 100%;
   font-family: inherit;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 
 body { 
@@ -247,7 +247,8 @@ a {
   font-size:19px;
   font-weight:normal;
   margin-bottom:10px;
-  text-transform:uppercase;
+  /*text-transform:uppercase;*/
+  text-shadow: 1px 1px 1px #AAA;
 }
 
 .node {
@@ -342,7 +343,9 @@ img.screenshot {
 body {
   margin:0 auto;
   width:860px;
-  background:#3f808a url(images/header-bg.jpg) no-repeat; /* modified by kemo */ 
+  /*background:#3f808a url(images/header-bg.jpg) no-repeat; /* modified by kemo */ 
+  /*background-color: #3b4d5e;*/
+  background-color: #232e38;
   background-position:top center; /* here we go with centered background */    /* modified by kemo */ 
   height:auto;
 }
@@ -388,7 +391,7 @@ body {
 }
 
 #leftside {
-  width:450px;
+  width:600px;
   float:left;
   margin-left:75px;
   margin-top:15px;
@@ -414,7 +417,7 @@ body {
 }
 
 #footer {
-  background:transparent url(images/footer-bg.jpg) no-repeat scroll -163px -172px;
+  /*background:transparent url(images/footer-bg.jpg) no-repeat scroll -163px -172px;*/
   clear:both;
   height:265px;
   width:900px;
@@ -454,11 +457,11 @@ body {
 }
 
 #site-info a {
-  color:#FFFFFF;
+  color:#EDEDED;
   margin-left:20px;
-  font-size:30px;
-  font-weight:bolder;
+  font-size:32px;
   text-decoration:none;
+  text-shadow: 1px 1px 1px #333;
 }
 
 #tabs li {
@@ -522,3 +525,14 @@ div.admin {
   border:1px solid #3F808A;
   width:100%;
 }
+/* make the paragraphs a little more readable - JG */
+.node p {
+    line-height: 1.5em;
+    font-size: 110%;
+}
+
+.node-author {
+  margin-bottom: 4px;
+  font-style: italic;
+}
+

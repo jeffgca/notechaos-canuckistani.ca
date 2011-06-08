@@ -13,10 +13,11 @@
 <?php if ($page == 1): ?>
   <h2><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
 <?php endif; ?>
-<div class="node-slash"></div>
+<!--<div class="node-slash"></div>-->
 
 
   <div class="content clear-block">
+    <p class="node-author">Posted by: <?php print theme('username', $node) ?></p>
     <?php print $content ?>
   </div>
 
