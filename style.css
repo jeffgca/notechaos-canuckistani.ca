@@ -1,0 +1,524 @@
+/* -------------------------------------------------------------- 
+  
+   reset.css
+   * Resets default browser CSS.
+   
+-------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: middle;
+}
+
+body { 
+  line-height: 1.5; 
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* -------------------------------------------------------------- 
+   
+   ie.css
+   
+   Contains every hack for Internet Explorer,
+   so that our core files stay sweet and nimble.
+   
+-------------------------------------------------------------- */
+
+/* Make sure the layout is centered in IE5 */
+
+/* Fixes IE margin bugs */
+* html .column, * html div.span-1, * html div.span-2, 
+* html div.span-3, * html div.span-4, * html div.span-5, 
+* html div.span-6, * html div.span-7, * html div.span-8, 
+* html div.span-9, * html div.span-10, * html div.span-11, 
+* html div.span-12, * html div.span-13, * html div.span-14, 
+* html div.span-15, * html div.span-16, * html div.span-17, 
+* html div.span-18, * html div.span-19, * html div.span-20, 
+* html div.span-21, * html div.span-22, * html div.span-23, 
+* html div.span-24 { display:inline; overflow-x: hidden; }
+
+
+/* Elements
+-------------------------------------------------------------- */
+
+/* Fixes incorrect styling of legend in IE6. */
+* html legend { margin:0px -8px 16px 0; padding:0; }
+
+/* Fixes incorrect placement of ol numbers in IE6/7. */
+ol { margin-left:2em; }
+
+/* Fixes wrong line-height on sup/sub in IE. */
+sup { vertical-align:text-top; }
+sub { vertical-align:text-bottom; }
+
+/* Fixes IE7 missing wrapping of code elements. */
+html>body p code { *white-space: normal; } 
+
+/* IE 6&7 has problems with setting proper <hr> margins. */
+hr  { margin:-8px auto 11px; }
+
+/* Explicitly set interpolation, allowing dynamically resized images to not look horrible */
+img { -ms-interpolation-mode:bicubic; }
+
+/* Clearing 
+-------------------------------------------------------------- */
+
+/* Makes clearfix actually work in IE */ 
+.clearfix, .container { display:inline-block; }
+* html .clearfix,
+* html .container { height:1%; }
+
+
+/* Forms 
+-------------------------------------------------------------- */
+
+/* Fixes padding on fieldset */
+fieldset { padding-top:0; }
+
+/* Makes classic textareas in IE 6 resemble other browsers */
+textarea { overflow:auto; }
+
+/* Fixes rule that IE 6 ignores */
+input.text, input.title, textarea { background-color:#fff; border:1px solid #bbb; }
+input.text:focus, input.title:focus { border-color:#666; }
+input.text, input.title, textarea, select { margin:0.5em 0; }
+input.checkbox, input.radio { position:relative; top:.25em; }
+
+/* Fixes alignment of inline form elements */ 
+form.inline div, form.inline p { vertical-align:middle; }
+form.inline label { position:relative;top:-0.25em; }
+form.inline input.checkbox, form.inline input.radio,
+form.inline input.button, form.inline button { 
+  margin:0.5em 0; 
+}
+button, input.button { position:relative;top:0.25em; }
+
+
+/* -------------------------------------------------------------- 
+
+   typography.css
+   * Sets up some sensible default typography.
+   
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+html { font-size:100.01%; }
+body { 
+  font-size: 75%;
+  color: #222; 
+  background: #fff;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #111; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 0 0 1.5em; }
+p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+a:focus, 
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; }
+dfn         { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre 				{ margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul, 
+li ol       { margin:0 1.5em; }
+ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table          { margin-bottom: 1.4em; width:100%; }
+th              { font-weight: bold; }
+thead th 		    { background: #c3d9ff; }
+tr.even td      { background: #e5ecf9; }
+tfoot           { font-style: italic; }
+caption         { background: #eee; }
+tr.even, tr.odd { background-color:#FFFFFF; border-bottom:1px solid #CCCCCC; padding:0.1em 0.6em;}
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+
+/* Classes
+-------------------------------------------------------------- */
+* {
+  margin:0;
+  padding:0;
+  color:#fff;
+  font-family:verdana;
+  color:#000;
+}
+
+.clear {
+  clear:both;
+}
+
+a {
+  color:#000;
+}
+
+.node-slash {
+  background:transparent url(images/node-slash.png) no-repeat scroll 0 0;
+  height:10px;
+}
+
+.node h2 {
+  font-size:19px;
+  font-weight:normal;
+  margin-bottom:10px;
+  text-transform:uppercase;
+}
+
+.node {
+  position:relative;
+  margin-bottom:50px;
+}
+
+.node h2 a {
+  text-decoration:none;
+}
+
+.block .content {
+  width:200px;
+  background:transparent url(images/block-body.png) repeat-y scroll 0 0;
+  padding-left:15px;
+  padding-top:20px;
+}
+
+.block .more-link {
+  margin-right:19px;
+}
+
+.block{
+  margin-bottom:10px; 
+}
+
+.block-header {
+  background:transparent url(images/block-header.png) no-repeat scroll 0 0;
+  height:72px;
+}
+
+.block > h2 {
+  background:transparent url(images/block-body.png) no-repeat scroll 0 0;
+  font-size:20px;
+  margin-bottom:-9px;
+  padding-left:27px;
+}
+
+.node-form .form-text {
+  border:1px solid #3F808A;
+  display:block;
+  font-size:12px;
+  margin-bottom:0;
+  width:434px;;
+  display:block;
+  padding:4px;
+  width:95%;
+}
+
+.form-textarea {
+  font-size:11px;
+}
+
+.rss {
+  height:50px;
+  width:50px;
+  margin-top:30px;
+}
+
+img.screenshot {
+  margin:10px;
+}
+
+.block-footer {
+  background:transparent url(images/block-footer.png) no-repeat scroll 0 0;
+  height:50px;
+  margin-left:3px;
+  margin-top:-1px;
+}
+
+.node-form textarea {
+  border:1px solid #3F808A;;
+  display:block;
+  padding:4px;
+  font-size:12px;
+  color:#3F808A;
+  width:95%;
+}
+.comment {
+  background:lightBlue none repeat scroll 0 0;
+  margin-bottom:10px;
+  padding:7px;
+}
+
+.comment .links {
+  float:right;
+}
+
+/* Body elements
+-------------------------------------------------------------- */
+
+body {
+  margin:0 auto;
+  width:860px;
+  background:#3f808a url(images/header-bg.jpg) no-repeat; /* modified by kemo */ 
+  background-position:top center; /* here we go with centered background */    /* modified by kemo */ 
+  height:auto;
+}
+
+#header {
+  height:205px;
+  position:relative;
+  width:785px;
+  margin-bottom:8px;
+}
+
+#site-info {
+  background:transparent url(images/site-title.png) no-repeat scroll 0 0;
+  left:45px;
+  padding:10px;
+  padding-left:7px;
+  position:absolute;
+  top:155px; /* background is above the content - just moved it a bit down - default value: top:150px; */  /* modified by kemo */ 
+  width:410px;
+}
+
+#site-slogan {
+  color:#FFFFFF;
+  font-size:10px;
+  margin-left:24px;
+  margin-top:1px;
+  width:300px;
+}
+
+#site-title {
+  display:block;
+  height:35px;
+  width:300px;
+}
+
+#nav {
+  display:block;
+  position:absolute;
+  right:6px;
+  top:-44px;
+  width:auto;
+  z-index:1;
+}
+
+#leftside {
+  width:450px;
+  float:left;
+  margin-left:75px;
+  margin-top:15px;
+  padding-bottom:41px;
+}
+
+#rightside {
+  clear:right;
+  float:right;
+  margin-top:15px;
+  width:240px;
+}
+
+#content-wrapper {
+  min-height:530px;
+  background:url(images/content-bg.png) repeat-y scroll 0 7px;
+  color:#000;
+  width:785px;
+}
+
+#tabs {
+  margin-bottom:9px;
+}
+
+#footer {
+  background:transparent url(images/footer-bg.jpg) no-repeat scroll -163px -172px;
+  clear:both;
+  height:265px;
+  width:900px;
+}
+
+/* Search
+-------------------------------------------------------------- */
+#search {
+  padding-top:4px;
+  position:absolute;
+  right:0;
+  width:364px;
+  z-index:2;
+  background:transparent url(images/search-bg.png) no-repeat scroll 0 0;
+  height:60px;
+}
+
+#search .form-item {
+  display:inline;
+  margin-left:70px;
+  position:relative;
+}
+
+#search label {
+  display:none;
+}
+
+#search input[type=submit] {
+  background:#FFFFFF none repeat scroll 0 0;
+  border:medium none;
+  padding:4px;
+}
+
+#search input[type=text] {
+  border:medium none;
+  padding:5px;
+}
+
+#site-info a {
+  color:#FFFFFF;
+  margin-left:20px;
+  font-size:30px;
+  font-weight:bolder;
+  text-decoration:none;
+}
+
+#tabs li {
+  display:inline;
+}
+
+#nav ul li {
+  background:transparent url(images/nav-bg.png) no-repeat scroll 0 0;
+  display:block;
+  float:left;
+  padding:106px 28px 30px;
+}
+
+#nav a {
+  color:#000;
+/*  background:#fff;*/ /* modified by kemo */ 
+  text-decoration:none;
+}
+
+span.submitted {
+  background:transparent url(images/submitted.png) no-repeat scroll 0 0;
+  color:#000;
+  display:block;
+  font-size:11px;
+  height:94px;
+  left:-116px;
+  padding:29px 20px 20px 35px;
+  position:absolute;
+  width:51px;
+}
+
+#rightside a {
+  text-decoration:none;
+}
+
+#tabs li {
+  background:snow none repeat scroll 0 0;
+  padding:8px;
+}
+
+#tabs li a {
+  text-decoration:none;
+}
+
+div.admin {
+  margin-bottom:16px;
+}
+
+#footer-message {
+  background:transparent url(images/footer.jpg) no-repeat scroll 0 0;
+  color:#FFFFFF;
+  font-size:17px;
+  height:118px;
+  margin-left:11%;
+  padding-top:30px;
+  text-align:center;
+  width:600px;
+}
+
+#leftside .form-text  {
+  border:1px solid #3F808A;
+  width:100%;
+}

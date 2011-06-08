@@ -1,0 +1,23 @@
+name = Note Chaos
+description = Tableless, two-column, blog theme.
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = style.css
+
+regions[leftside] = Leftside
+regions[rightside] = Rightside 
+
+
+; Information added by drupal.org packaging script on 2010-01-09
+version = "6.x-2.2"
+core = "6.x"
+project = "notechaos"
+datestamp = "1263034506"
+
+
+; Information added by drupal.org packaging script on 2010-01-19
+version = "6.x-2.3"
+core = "6.x"
+project = "notechaos"
+datestamp = "1263912612"
+
