@@ -5,16 +5,12 @@
 
   <div class="clear-block">
   <?php if ($submitted): ?>
-    <span class="submitted"><?php print $submitted; ?></span>
+    <span class="comment-submitted"><?php print $submitted; ?></span>
   <?php endif; ?>
-
+ 
   <?php if ($comment->new) : ?>
     <span class="new"><?php print drupal_ucfirst($new) ?></span>
   <?php endif; ?>
-
-  <?php print $picture ?>
-
-    <h3><?php print $title ?></h3>
 
     <div class="content">
       <?php print $content ?>
@@ -24,7 +20,7 @@
         <?php print $signature ?>
       </div>
       <?php endif; ?>
-  <?php if ($links): ?>
+ <?php if ($links): ?>
     <div class="links"><?php print $links ?></div>
   <?php endif; ?>
     </div>
